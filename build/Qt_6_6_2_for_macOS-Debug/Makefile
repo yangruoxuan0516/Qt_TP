@@ -54,12 +54,14 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../../main.cpp \
 		../../mainwindow.cpp \
-		../../drawgraphics.cpp qrc_qmake_qmake_qm_files.cpp \
+		../../drawgraphics.cpp qrc_resource.cpp \
+		qrc_qmake_qmake_qm_files.cpp \
 		moc_mainwindow.cpp \
 		moc_drawgraphics.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		drawgraphics.o \
+		qrc_resource.o \
 		qrc_qmake_qmake_qm_files.o \
 		moc_mainwindow.o \
 		moc_drawgraphics.o
@@ -529,6 +531,7 @@ Makefile: ../../QtTP.pro /Users/ruox/Qt/6.6.2/macos/mkspecs/macx-clang/qmake.con
 		/Users/ruox/Qt/6.6.2/macos/mkspecs/features/yacc.prf \
 		/Users/ruox/Qt/6.6.2/macos/mkspecs/features/lex.prf \
 		../../QtTP.pro \
+		../../resource.qrc \
 		qmake_qmake_qm_files.qrc \
 		/Users/ruox/Qt/6.6.2/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl \
 		/Users/ruox/Qt/6.6.2/macos/lib/QtGui.framework/Resources/QtGui.prl \
@@ -753,6 +756,7 @@ Makefile: ../../QtTP.pro /Users/ruox/Qt/6.6.2/macos/mkspecs/macx-clang/qmake.con
 /Users/ruox/Qt/6.6.2/macos/mkspecs/features/yacc.prf:
 /Users/ruox/Qt/6.6.2/macos/mkspecs/features/lex.prf:
 ../../QtTP.pro:
+../../resource.qrc:
 qmake_qmake_qm_files.qrc:
 /Users/ruox/Qt/6.6.2/macos/lib/QtWidgets.framework/Resources/QtWidgets.prl:
 /Users/ruox/Qt/6.6.2/macos/lib/QtGui.framework/Resources/QtGui.prl:
@@ -782,7 +786,7 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../../QtTP_fr_FR.ts $(DISTDIR)/
-	$(COPY_FILE) --parents qmake_qmake_qm_files.qrc $(DISTDIR)/
+	$(COPY_FILE) --parents ../../resource.qrc qmake_qmake_qm_files.qrc $(DISTDIR)/
 	$(COPY_FILE) --parents ../../mainwindow.h ../../drawgraphics.h ../../graphicitem.h $(DISTDIR)/
 	$(COPY_FILE) --parents ../../main.cpp ../../mainwindow.cpp ../../drawgraphics.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../../mainwindow.ui $(DISTDIR)/
@@ -819,9 +823,15 @@ compiler_lrelease_clean:
 .qm/QtTP_fr_FR.qm: ../../QtTP_fr_FR.ts
 	/Users/ruox/Qt/6.6.2/macos/bin/lrelease ../../QtTP_fr_FR.ts -qm .qm/QtTP_fr_FR.qm
 
-compiler_rcc_make_all: qrc_qmake_qmake_qm_files.cpp
+compiler_rcc_make_all: qrc_resource.cpp qrc_qmake_qmake_qm_files.cpp
 compiler_rcc_clean:
-	-$(DEL_FILE) qrc_qmake_qmake_qm_files.cpp
+	-$(DEL_FILE) qrc_resource.cpp qrc_qmake_qmake_qm_files.cpp
+qrc_resource.cpp: ../../resource.qrc \
+		/Users/ruox/Qt/6.6.2/macos/libexec/rcc \
+		../../images/myOPEN.png \
+		../../images/mySAVE.png
+	/Users/ruox/Qt/6.6.2/macos/libexec/rcc -name resource --no-zstd ../../resource.qrc -o qrc_resource.cpp
+
 qrc_qmake_qmake_qm_files.cpp: qmake_qmake_qm_files.qrc \
 		/Users/ruox/Qt/6.6.2/macos/libexec/rcc \
 		.qm/QtTP_fr_FR.qm
@@ -1018,6 +1028,9 @@ drawgraphics.o: ../../drawgraphics.cpp ../../drawgraphics.h \
 		/Users/ruox/Qt/6.6.2/macos/lib/QtCore.framework/Headers/QJsonDocument \
 		/Users/ruox/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qjsondocument.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o drawgraphics.o ../../drawgraphics.cpp
+
+qrc_resource.o: qrc_resource.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resource.o qrc_resource.cpp
 
 qrc_qmake_qmake_qm_files.o: qrc_qmake_qmake_qm_files.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_qmake_qmake_qm_files.o qrc_qmake_qmake_qm_files.cpp

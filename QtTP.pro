@@ -22,7 +22,7 @@ FORMS += \
     mainwindow.ui
 
 RESOURCES += \
-    resources.qrc
+    resource.qrc
 
 TRANSLATIONS += \
     QtTP_fr_FR.ts
