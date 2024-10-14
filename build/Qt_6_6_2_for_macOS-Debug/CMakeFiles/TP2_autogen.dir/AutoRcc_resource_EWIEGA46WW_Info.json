@@ -1,0 +1,33 @@
+{
+	"BUILD_DIR" : "/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/TP2_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2",
+	"CMAKE_SOURCE_DIR" : "/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/TP2_autogen/include",
+	"INPUTS" : 
+	[
+		"/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/new.png",
+		"/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/myOPEN.png",
+		"/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/mySAVE.png",
+		"/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/save.png",
+		"/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/open.png",
+		"/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/quit.png",
+		"/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/copy.png",
+		"/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/paste.png",
+		"/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/cut.png"
+	],
+	"LOCK_FILE" : "/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/CMakeFiles/TP2_autogen.dir/AutoRcc_resource_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "resource" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resource.cpp",
+	"RCC_EXECUTABLE" : "/Users/ruox/Qt/6.6.2/macos/./libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/CMakeFiles/TP2_autogen.dir/AutoRcc_resource_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/resource.qrc",
+	"USE_BETTER_GRAPH" : false,
+	"VERBOSITY" : 0
+}

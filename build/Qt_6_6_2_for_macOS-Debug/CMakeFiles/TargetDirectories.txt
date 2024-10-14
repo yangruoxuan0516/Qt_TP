@@ -1,0 +1,9 @@
+/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/CMakeFiles/TP2.dir
+/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/CMakeFiles/list_install_components.dir
+/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/CMakeFiles/install.dir
+/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/CMakeFiles/install/local.dir
+/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/CMakeFiles/install/strip.dir
+/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/CMakeFiles/TP2_autogen_timestamp_deps.dir
+/Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/build/Qt_6_6_2_for_macOS-Debug/CMakeFiles/TP2_autogen.dir
