@@ -160,6 +160,7 @@ void DrawGraphics::paintEvent(QPaintEvent *event)
 
     for (int i = 0; i < graphics.size(); ++i) {
         pen.setColor(graphics[i]->getColor());
+        std::cout<<"gs t"<<graphics[i]->getThickness()<<std::endl;
         pen.setWidth(graphics[i]->getThickness());
         pen.setStyle(graphics[i]->getStyle());
         painter.setPen(pen);
@@ -173,16 +174,18 @@ void DrawGraphics::paintEvent(QPaintEvent *event)
         }
     }
     if (currentGraphic && !isLoading) {
-        pen.setColor(currentGraphic->getColor());
+        if (currentGraphic->getThickness() > 0 and currentGraphic->getThickness() <= 3){
+            pen.setColor(currentGraphic->getColor());
 
-        pen.setWidth(currentGraphic->getThickness());
+            std::cout<<"cg t"<<currentGraphic->getThickness()<<std::endl;
+            pen.setWidth(currentGraphic->getThickness());
 
-        pen.setStyle(currentGraphic->getStyle());
+            pen.setStyle(currentGraphic->getStyle());
 
-        painter.setPen(pen); //here's line 199
+            painter.setPen(pen); //here's line 199
 
-        currentGraphic->draw(&painter);
-
+            currentGraphic->draw(&painter);
+        }
     }
 }
 
@@ -324,13 +327,13 @@ void DrawGraphics::drawJsonArray(QJsonArray jsonArray){
         int style = jsonItem["style"].toInt();
         switch (style) {
         case 0:
-            currentStyle = Qt::SolidLine;
+            item->setStyle(Qt::SolidLine);
             break;
         case 1:
-            currentStyle = Qt::DashLine;
+            item->setStyle(Qt::DashLine);
             break;
         case 2:
-            currentStyle = Qt::DotLine;
+            item->setStyle(Qt::DotLine);
             break;
         }
         QPointF* p;
