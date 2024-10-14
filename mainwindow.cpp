@@ -314,7 +314,6 @@ void MainWindow::savePainting() {
 
         if (file.open(QIODevice::WriteOnly)) {
             QJsonArray jsonArray = this->dg->toJsonArray();
-
             QJsonDocument jsonDoc(jsonArray);
             file.write(jsonDoc.toJson());  // Write the JSON to the file
             file.close();

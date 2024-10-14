@@ -160,7 +160,6 @@ void DrawGraphics::paintEvent(QPaintEvent *event)
 
     for (int i = 0; i < graphics.size(); ++i) {
         pen.setColor(graphics[i]->getColor());
-        std::cout<<"gs t"<<graphics[i]->getThickness()<<std::endl;
         pen.setWidth(graphics[i]->getThickness());
         pen.setStyle(graphics[i]->getStyle());
         painter.setPen(pen);
@@ -177,7 +176,6 @@ void DrawGraphics::paintEvent(QPaintEvent *event)
         if (currentGraphic->getThickness() > 0 and currentGraphic->getThickness() <= 3){
             pen.setColor(currentGraphic->getColor());
 
-            std::cout<<"cg t"<<currentGraphic->getThickness()<<std::endl;
             pen.setWidth(currentGraphic->getThickness());
 
             pen.setStyle(currentGraphic->getStyle());
@@ -289,7 +287,7 @@ QJsonArray DrawGraphics::toJsonArray(){
         jsonItem["shape"] = item->getShape();   // Assume `getShape` returns a string/int representing the shape type
         jsonItem["color"] = item->getColor().name();  // Assuming getColor returns a QColor object
         jsonItem["thickness"] = item->getThickness();
-        jsonItem["style"] = item->getStyle();  // Assuming getStyle returns a line style
+        jsonItem["style"] = item->getStyle()-1;  // Assuming getStyle returns a line style
         jsonItem["p1x"] = item->getP1X();  // Position data
         jsonItem["p1y"] = item->getP1Y();
         jsonItem["p2x"] = item->getP2X();
@@ -301,11 +299,12 @@ QJsonArray DrawGraphics::toJsonArray(){
 
 
 void DrawGraphics::drawJsonArray(QJsonArray jsonArray){
-    for (GraphicItem* item : graphics) {
-        delete item;  // Free memory for each item
+    if (graphics.size()>0){
+        for (GraphicItem* item : graphics) {
+            delete item;  // Free memory for each item
+        }
+        graphics.clear();  // Clear the container
     }
-    graphics.clear();  // Clear the container
-
     update();
     for (const QJsonValue& value : jsonArray) {
         QJsonObject jsonItem = value.toObject();
@@ -336,7 +335,7 @@ void DrawGraphics::drawJsonArray(QJsonArray jsonArray){
             item->setStyle(Qt::DotLine);
             break;
         }
-        QPointF* p;
+        QPointF* p = new QPointF();
         p->setX(jsonItem["p1x"].toDouble());
         p->setY(jsonItem["p1y"].toDouble());
         item->setStart(p);
