@@ -79,6 +79,8 @@ TP2_autogen/timestamp: CMakeFiles/TP2.dir/compiler_depend.ts
 TP2_autogen/EWIEGA46WW/qrc_resource.cpp: /Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/resource.qrc
 TP2_autogen/EWIEGA46WW/qrc_resource.cpp: CMakeFiles/TP2_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json
 TP2_autogen/EWIEGA46WW/qrc_resource.cpp: /Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/new.png
+TP2_autogen/EWIEGA46WW/qrc_resource.cpp: /Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/myOPEN.png
+TP2_autogen/EWIEGA46WW/qrc_resource.cpp: /Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/mySAVE.png
 TP2_autogen/EWIEGA46WW/qrc_resource.cpp: /Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/save.png
 TP2_autogen/EWIEGA46WW/qrc_resource.cpp: /Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/open.png
 TP2_autogen/EWIEGA46WW/qrc_resource.cpp: /Users/ruox/Documents/DoubleDegree/cours_2/IGR201/TP2/images/quit.png
