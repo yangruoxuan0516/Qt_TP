@@ -24,8 +24,6 @@ FORMS += \
 RESOURCES += \
     resource.qrc
 
-TRANSLATIONS += \
-    QtTP_fr_FR.ts
 CONFIG += lrelease
 CONFIG += embed_translations
 
